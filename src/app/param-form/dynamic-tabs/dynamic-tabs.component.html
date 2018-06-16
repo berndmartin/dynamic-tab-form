@@ -1,0 +1,12 @@
+<app-tabs #tabs [(selectedId)]="selectedId">
+    <!-- static tab goes here -->
+</app-tabs>
+
+<ng-template let-data="data" #appDynamicForm>
+    <app-dynamic-form
+        [questions]="data.questions"
+        [buttonnext]="data.buttonnext"
+        [dynamicTabId]="data.dynamicTabId"
+        (nextTab)="nextTab($event)">
+    </app-dynamic-form>
+</ng-template>

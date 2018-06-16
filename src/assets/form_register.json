@@ -1,0 +1,213 @@
+{
+  "fields": [
+    {
+      "value": "",
+      "key": "firstname",
+      "label": "First name",
+      "required": false,
+      "order": 0,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "minLength:2",
+        "maxLength:30",
+        "RegisterValidator:notEmptyValidator"
+      ],
+      "asyncValidators": []
+    },
+    {
+      "value": "",
+      "key": "lastname",
+      "label": "Last name",
+      "required": false,
+      "order": 1,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "minLength:2",
+        "maxLength:30",
+        "RegisterValidator:notEmptyValidator"
+      ],
+      "asyncValidators": []
+    },
+    {
+      "value": "",
+      "key": "email",
+      "label": "E-Mail address",
+      "required": false,
+      "order": 2,
+      "controlType": "TextboxQuestion",
+      "type": "email",
+      "options": [],
+      "tabGroup": 0,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "maxLength:320",
+        "pattern:[^ @]*@[^ @]*",
+        "email"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "password",
+      "label": "Password",
+      "required": false,
+      "order": 3,
+      "controlType": "TextboxQuestion",
+      "type": "password",
+      "options": [],
+      "tabGroup": 0,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "minLength:2",
+        "maxLength:256",
+        "RegisterValidator:notEmptyValidator"
+      ],
+      "asyncValidators": [
+        "BlackListValidator"
+      ]
+    },
+    {
+      "value": "",
+      "key": "passwordrevise",
+      "label": "Password revise",
+      "required": false,
+      "order": 4,
+      "controlType": "TextboxQuestion",
+      "type": "password",
+      "options": [],
+      "tabGroup": 0,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "MatchOtherValidator:password"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "mobilephone",
+      "label": "Mobile phone",
+      "required": false,
+      "order": 20,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 1,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "maxLength:30"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "street",
+      "label": "Street and number of the house",
+      "required": false,
+      "order": 20,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 1,
+      "panelGroup": 0,
+      "syncValidators": [
+        "maxLength:60"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "city",
+      "label": "City and postcode",
+      "required": false,
+      "order": 20,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 1,
+      "panelGroup": 0,
+      "syncValidators": [
+        "maxLength:60"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "gtac",
+      "label": "General terms and conditions",
+      "required": false,
+      "order": 100,
+      "controlType": "CheckboxQuestion",
+      "type": "checkbox",
+      "options": [],
+      "tabGroup": 2,
+      "panelGroup": 0,
+      "syncValidators": [
+        "required",
+        "requiredTrue"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "newsletter",
+      "label": "Subscribe to newsletter",
+      "required": false,
+      "order": 200,
+      "controlType": "CheckboxQuestion",
+      "type": "checkbox",
+      "options": [],
+      "tabGroup": 2,
+      "panelGroup": 0,
+      "syncValidators": [
+      ],
+      "asyncValidators": [
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "id": 0,
+      "title": "Step 1",
+      "subtitle": "Register now",
+      "buttonnext": "Next personal data",
+      "questions": [],
+      "order": 0
+    },
+    {
+      "id": 1,
+      "title": "Step 2",
+      "subtitle": "Personal data",
+      "buttonnext": "Next privacy policy",
+      "questions": [],
+      "order": 1
+    },
+    {
+      "id": 2,
+      "title": "Step 3",
+      "subtitle": "Privacy policy",
+      "buttonnext": "Complete the registration",
+      "questions": [],
+      "order": 2
+    }
+  ]
+}

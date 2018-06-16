@@ -1,0 +1,5 @@
+<app-dynamic-tabs
+    *ngIf="questiontabs && questiontabs.length"
+    [questiontabs]="questiontabs"
+    (lastTab)="lastTab($event)">
+</app-dynamic-tabs>

@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs" *ngIf="mergedTabs.length > 1">
+      <li *ngFor="let tab of mergedTabs; index as i"
+          [attr.data-index]="i" [title]="tab.tabTitle" class="nav-item"
+          [attr.disabled]="!(i < currentTabIdx)">
+        <a [attr.disabled]="!(i < currentTabIdx)" class="nav-link"
+           [ngClass]="{'active':tab.active, 'disabled': !(i < currentTabIdx) }"
+           (click)="i < currentTabIdx && selectTab(tab)">{{
+          tab.tabTitle }}</a>
+      </li>
+    </ul>
+    <div class="nav-item" *ngIf="mergedTabs.length === 1">
+      {{ mergedTabs[0].tabTitle }}
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ subbtitle }}</h5>
+    <ng-content></ng-content>
+    <ng-template appDynamicTabs></ng-template>
+  </div>
+</div>

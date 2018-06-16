@@ -1,0 +1,27 @@
+<form *ngIf="questions" (ngSubmit)="onSubmit()" [formGroup]="form">
+  <fieldset>
+
+    <span *ngFor="let question of questions">
+      <app-dynamic-form-question
+        [question]="question"
+        [form]="form">
+      </app-dynamic-form-question>
+    </span>
+    <button
+      class="btn"
+      type="submit"
+      [disabled]="!form.valid"
+      [ngClass]="{'btn-primary': form.valid, 'btn-outline-secondary': !form.valid}">
+      {{ buttonnext }}
+    </button>
+    <div class="card text-white" [ngClass]="{'bg-warning': !form.valid, 'bg-info': form.valid }"
+         style="margin-top: 30px;"
+         *ngIf="!env.production">
+      <div class="card-body">
+        <p>Value: {{ form.value | json }}</p>
+        <p>Validation status: {{ form.status }}</p>
+      </div>
+    </div>
+  </fieldset>
+
+</form>

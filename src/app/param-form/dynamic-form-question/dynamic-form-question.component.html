@@ -1,0 +1,39 @@
+<span *ngIf="question && question.controlType" [formGroup]="form">
+  <span [ngSwitch]="question.controlType">
+
+    <div *ngSwitchCase="'textbox'" class="form-group"
+         [ngClass]="{'has-error': true, 'has-success': !form?.controls[question.key]?.errors}">
+      <label [for]="question.key">{{question.label}}</label>
+      <input
+        [autofocus]="question.order === 0"
+        [id]="question.key"
+        [formControlName]="question.key"
+        [type]="question.type"
+        class="form-control"
+        aria-describedby="'error' + question.key">
+      <app-error-validation [field]="form?.controls[question.key]"></app-error-validation>
+    </div>
+
+    <div *ngSwitchCase="'checkbox'" class="form-check">
+      <input
+        [id]="question.key"
+        [formControlName]="question.key"
+        type="checkbox"
+        [name]="question.value"
+        [value]="question.value"
+        class="form-check-input"
+      />
+      <label [attr.for]="question.key" class="form-check-label noselect">{{question.label}}</label>
+      <app-error-validation [field]="form?.controls[question.key]"></app-error-validation>
+    </div>
+
+    <select *ngSwitchCase="'dropdown'"
+            [id]="question.key"
+            class="form-control"
+            [formControlName]="question.key">
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+  </span>
+
+  <!--<div class="errorMessage" *ngIf="!isValid">{{question.key}} is required</div>-->
+</span>

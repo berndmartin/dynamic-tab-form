@@ -1,0 +1,27 @@
+<small id="" *ngIf="field?.errors?.required && field?.touched" class="form-text text-warning">
+	<span>An input is required for this field.</span>
+</small>
+
+<small *ngIf="field?.errors?.minlength" class="form text text-warning">
+	<span>Please enter at least {{ field?.errors.minlength.requiredLength }} characters.</span>
+</small>
+
+<small *ngIf="field?.errors?.maxlength" class="form text text-warning">
+	<span>The maximum character length is exceeded.</span>
+</small>
+
+<small *ngIf="field?.errors?.blackListValidator" class="form text text-warning">
+	<span>Password not allowed (blacklisted).</span>
+</small>
+
+<small *ngIf="field?.errors?.matchOther && !field?.pristine" class="form text text-warning">
+	<span>Passwords do not match.</span>
+</small>
+
+<small *ngIf="field?.errors?.phoneNumberValidate" class="form text text-warning">
+	<span>Please enter a valid mobile phone number.</span>
+</small>
+
+<small *ngIf="field?.errors?.email && field?.touched && !field?.errors?.required" class="form text text-warning">
+	<span>Please enter a valid e-mail address.</span>
+</small>

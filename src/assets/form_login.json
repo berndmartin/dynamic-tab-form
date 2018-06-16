@@ -1,0 +1,50 @@
+{
+    "fields": [
+        {
+            "value": "",
+            "key": "email",
+            "label": "E-Mail Address",
+            "required": false,
+            "order": 2,
+            "controlType": "TextboxQuestion",
+            "type": "email",
+            "options": [],
+            "tabGroup": 0,
+            "panelGroup": 0,
+            "syncValidators": [
+                "required",
+                "pattern:[^ @]*@[^ @]*",
+                "email"
+            ],
+            "asyncValidators": [
+            ]
+        },
+        {
+            "value": "",
+            "key": "password",
+            "label": "Password",
+            "required": false,
+            "order": 3,
+            "controlType": "TextboxQuestion",
+            "type": "password",
+            "options": [],
+            "tabGroup": 0,
+            "panelGroup": 0,
+            "syncValidators": [
+                "required"
+            ],
+            "asyncValidators": [
+            ]
+        }
+    ],
+    "tabs": [
+        {
+            "id": 0,
+            "title": "Welcome",
+            "subtitle": "Login to Dynamic-Tab-Form",
+            "buttonnext": "Login",
+            "questions": [],
+            "order": 0
+        }
+    ]
+}
