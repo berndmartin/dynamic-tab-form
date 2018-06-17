@@ -5,6 +5,10 @@ Both dynamic registers and input fields are generated on the fly.
 In this example a login and a register mask is created based on the construction plans stored under **'assets/form_*\<maskname>*.json'**. 
 The registers and fields are created and displayed dynamically.
 
+* metadata determine the structure of registers and fields
+* creating on the fly without changing the application code
+* build only once for different forms
+
 ## Demo
 
 Have a look at the demo from this <a href="https://stackblitz.com/github/berndmartin/dynamic-tab-form" target="_blank">code</a>.
@@ -14,6 +18,14 @@ Have a look at the demo from this <a href="https://stackblitz.com/github/berndma
 The registers and fields to be created are transferred to the service (questionService). 
 This service takes over the task of generating the form on the basis of the values.
 
+```json
+{
+  "fields": [...],
+  "tabs": [...]
+}
+```
+
+### register.component.ts
 
 ```javascript
 import {QuestionService} from '../param-form/question/question.service';
@@ -37,6 +49,8 @@ export class RegisterComponent implements OnInit {
 }
 
 ```
+
+
 
 ## Example 'assets/form_*register*.json'
 
