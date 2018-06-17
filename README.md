@@ -9,7 +9,36 @@ The registers and fields are created and displayed dynamically.
 
 Have a look at the demo from this <a href="https://stackblitz.com/github/berndmartin/dynamic-tab-form" target="_blank">code</a>.
 
-## Example 'assets/form_register.json'
+## Operation principle
+
+The registers and fields to be created are transferred to the service (questionService). 
+This service takes over the task of generating the form on the basis of the values.
+
+
+```javascript
+import {QuestionService} from '../param-form/question/question.service';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  providers: [QuestionService]
+})
+export class RegisterComponent implements OnInit {
+
+  questiontabs: any[] = null;
+
+  ngOnInit() {
+    this.questionService
+      .getTabs('register')
+      .subscribe(data => {
+        this.questiontabs = data;
+      });
+  }
+}
+
+```
+
+## Example 'assets/form_*register*.json'
 
 The **'assets/form_rgister.json'** file consits of two object arrays. These are the objects **fields** and **tabs**.
 
