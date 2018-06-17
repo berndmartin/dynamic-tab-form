@@ -1,13 +1,13 @@
 # DynamicTabForm
 
-This project based on the examples of [Angular Dynamic Forms](https://angular.io/guide/dynamic-form?target=_blank) version 6.0.8.
+This project based on the examples of <a href="https://angular.io/guide/dynamic-form?" target="_blank">Angular Dynamic Forms</a> version 6.0.8.
 Both dynamic registers and input fields are generated on the fly. 
 In this example a login and a register mask is created based on the construction plans stored under **'assets/form_*\<maskname>*.json'**. 
 The registers and fields are created and displayed dynamically.
 
 ## Demo
 
-Have a look at the demo from this [code](https://stackblitz.com/github/berndmartin/dynamic-tab-form).
+Have a look at the demo from this <a href="https://stackblitz.com/github/berndmartin/dynamic-tab-form" target="_blank">code</a>.
 
 ## Example 'assets/form_register.json'
 
