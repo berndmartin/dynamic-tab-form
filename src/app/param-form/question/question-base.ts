@@ -9,7 +9,6 @@ export class QuestionBase<T> {
     options: any;
     //
     tabGroup: number;
-    panelGroup: number;
     syncValidators: any;
     asyncValidators: any;
 
@@ -22,7 +21,6 @@ export class QuestionBase<T> {
         controlType?: string,
         //
         tabGroup?: number,
-        panelGroup?: number,
         syncValidators?: string,
         asyncValidators?: string
     } = {}) {
@@ -36,7 +34,6 @@ export class QuestionBase<T> {
         this.options = null;
         //
         this.tabGroup = options.tabGroup || null;
-        this.panelGroup = options.panelGroup || null;
         this.syncValidators = options.syncValidators || null;
         this.asyncValidators = options.asyncValidators || null;
     }

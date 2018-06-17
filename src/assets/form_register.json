@@ -10,7 +10,6 @@
       "type": "text",
       "options": [],
       "tabGroup": 0,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "minLength:2",
@@ -29,7 +28,6 @@
       "type": "text",
       "options": [],
       "tabGroup": 0,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "minLength:2",
@@ -48,7 +46,6 @@
       "type": "email",
       "options": [],
       "tabGroup": 0,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "maxLength:320",
@@ -68,7 +65,6 @@
       "type": "password",
       "options": [],
       "tabGroup": 0,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "minLength:2",
@@ -89,7 +85,6 @@
       "type": "password",
       "options": [],
       "tabGroup": 0,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "MatchOtherValidator:password"
@@ -107,7 +102,6 @@
       "type": "text",
       "options": [],
       "tabGroup": 1,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "maxLength:30"
@@ -125,7 +119,6 @@
       "type": "text",
       "options": [],
       "tabGroup": 1,
-      "panelGroup": 0,
       "syncValidators": [
         "maxLength:60"
       ],
@@ -142,7 +135,6 @@
       "type": "text",
       "options": [],
       "tabGroup": 1,
-      "panelGroup": 0,
       "syncValidators": [
         "maxLength:60"
       ],
@@ -159,7 +151,6 @@
       "type": "checkbox",
       "options": [],
       "tabGroup": 2,
-      "panelGroup": 0,
       "syncValidators": [
         "required",
         "requiredTrue"
@@ -177,7 +168,6 @@
       "type": "checkbox",
       "options": [],
       "tabGroup": 2,
-      "panelGroup": 0,
       "syncValidators": [
       ],
       "asyncValidators": [
@@ -190,7 +180,6 @@
       "title": "Step 1",
       "subtitle": "Register now",
       "buttonnext": "Next personal data",
-      "questions": [],
       "order": 0
     },
     {
@@ -198,7 +187,6 @@
       "title": "Step 2",
       "subtitle": "Personal data",
       "buttonnext": "Next privacy policy",
-      "questions": [],
       "order": 1
     },
     {
@@ -206,7 +194,6 @@
       "title": "Step 3",
       "subtitle": "Privacy policy",
       "buttonnext": "Complete the registration",
-      "questions": [],
       "order": 2
     }
   ]

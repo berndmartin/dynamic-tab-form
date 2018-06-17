@@ -10,7 +10,6 @@
             "type": "email",
             "options": [],
             "tabGroup": 0,
-            "panelGroup": 0,
             "syncValidators": [
                 "required",
                 "pattern:[^ @]*@[^ @]*",
@@ -29,7 +28,6 @@
             "type": "password",
             "options": [],
             "tabGroup": 0,
-            "panelGroup": 0,
             "syncValidators": [
                 "required"
             ],
@@ -43,7 +41,6 @@
             "title": "Welcome",
             "subtitle": "Login to Dynamic-Tab-Form",
             "buttonnext": "Login",
-            "questions": [],
             "order": 0
         }
     ]
