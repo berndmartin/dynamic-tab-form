@@ -1,0 +1,6 @@
+<a [routerLink]="['/update']" class="btn btn-info" style="margin-bottom: 10px;">Cancel</a>
+<app-dynamic-tabs
+    *ngIf="usertabs && usertabs.length"
+    [questiontabs]="usertabs"
+    (lastTab)="lastTab($event)">
+</app-dynamic-tabs>

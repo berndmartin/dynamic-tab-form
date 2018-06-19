@@ -1,0 +1,20 @@
+[
+  {
+    "id":0,
+    "firstname": "Ludwig",
+    "lastname": "Wittgenstein",
+    "mobilephone": "12345678",
+    "street": "55 John E Devine Dr",
+    "city": "Tampa, NH 03103, USA"
+  },
+  {
+    "id":1,
+    "firstname": "François",
+    "lastname": "Voltaire",
+    "mobilephone": "87654321",
+    "street": "4100 George J Bean Pkwy",
+    "city": "Manchester, FL 33607, USA"
+  }
+]
+
+

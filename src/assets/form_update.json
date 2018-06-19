@@ -1,0 +1,98 @@
+{
+  "fields": [
+    {
+      "value": "",
+      "key": "firstname",
+      "label": "First name",
+      "required": false,
+      "order": 0,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "syncValidators": [
+        "required",
+        "minLength:2",
+        "maxLength:30",
+        "RegisterValidator:notEmptyValidator"
+      ],
+      "asyncValidators": []
+    },
+    {
+      "value": "",
+      "key": "lastname",
+      "label": "Last name",
+      "required": false,
+      "order": 1,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "syncValidators": [
+        "required",
+        "minLength:2",
+        "maxLength:30",
+        "RegisterValidator:notEmptyValidator"
+      ],
+      "asyncValidators": []
+    },
+    {
+      "value": "",
+      "key": "mobilephone",
+      "label": "Mobile phone",
+      "required": false,
+      "order": 20,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "syncValidators": [
+        "required",
+        "maxLength:30"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "street",
+      "label": "Street and number of the house",
+      "required": false,
+      "order": 20,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "syncValidators": [
+        "maxLength:60"
+      ],
+      "asyncValidators": [
+      ]
+    },
+    {
+      "value": "",
+      "key": "city",
+      "label": "City and postcode",
+      "required": false,
+      "order": 20,
+      "controlType": "TextboxQuestion",
+      "type": "text",
+      "options": [],
+      "tabGroup": 0,
+      "syncValidators": [
+        "maxLength:60"
+      ],
+      "asyncValidators": [
+      ]
+    }
+  ],
+  "tabs": [
+    {
+      "id": 0,
+      "title": "Step 1",
+      "subtitle": "Update Profile",
+      "buttonnext": "Save",
+      "order": 0
+    }
+  ]
+}

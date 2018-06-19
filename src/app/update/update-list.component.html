@@ -1,0 +1,17 @@
+<h2>Update registed users</h2>
+
+<div class="card">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let user of list">
+      <div class="row">
+        <div class="col-sm">
+          <p class="card-text">{{user.firstname}} {{user.lastname}}</p>
+        </div>
+        <div class="col-sm">
+          <button (click)="selectUser(user.id)" class="btn btn-primary" style="float: right;">Update</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
