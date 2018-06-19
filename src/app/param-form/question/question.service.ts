@@ -24,7 +24,7 @@ export class QuestionService {
     return this.http.get(`/assets/form_${formName}.json`);
   }
 
-  getTabs(formName: string) {
+  getTabs(formName: string, values: object = {}) {
 
     function groupBy(xs, f) {
       return xs.reduce((r, v, i, a, k = f(v)) => ((r[k] || (r[k] = [])).push(v), r), {});
@@ -41,6 +41,7 @@ export class QuestionService {
           ntabs.forEach((tab, idx) => {
             tab.questions = fieldsByTabGroup[idx]
               .map(field => {
+                field.value = values.hasOwnProperty(field.key) ? values[field.key] : '';
                 return new this.questionBox[field.controlType](field);
               });
           });

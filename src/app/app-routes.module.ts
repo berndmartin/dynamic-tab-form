@@ -13,6 +13,9 @@ const APP_ROUTES: Routes = [
     path: 'register',
     loadChildren: './register/register.module#RegisterModule',
   }, {
+    path: 'update',
+    loadChildren: './update/update.module#UpdateModule',
+  }, {
     path: '**',
     redirectTo: '/login'
   }

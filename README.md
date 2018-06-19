@@ -1,9 +1,12 @@
 # DynamicTabForm
 
-This project based on the examples of <a href="https://angular.io/guide/dynamic-form?" target="_blank">Angular Dynamic Forms</a> version 6.0.8.
+This project based on the examples of 
+<a href="https://angular.io/guide/dynamic-form?" target="_blank">Angular Dynamic Forms</a> version 6.0.8.
 Both dynamic registers and input fields are generated on the fly. 
-In this example a login and a register mask is created based on the construction plans stored under **'assets/form_*\<maskname>*.json'**. 
-The registers and fields are created and displayed dynamically.
+In this example a login, a register and a update mask is created based on the construction 
+plans stored under *'assets/form_**\<maskname>**.json'*. 
+
+The advantages of such a solution:
 
 * metadata determine the structure of registers and fields
 * creating on the fly without changing the application code
@@ -25,7 +28,7 @@ This service takes over the task of generating the form on the basis of the valu
 }
 ```
 
-### register.component.ts
+### Component example register.component.ts
 
 ```javascript
 import {QuestionService} from '../param-form/question/question.service';
@@ -41,7 +44,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.questionService
-      .getTabs('register')
+      .getTabs('register')      // use construction plan 'assets/form_register.json'
       .subscribe(data => {
         this.questiontabs = data;
       });
@@ -54,7 +57,7 @@ export class RegisterComponent implements OnInit {
 
 ## Example 'assets/form_*register*.json'
 
-The **'assets/form_rgister.json'** file consits of two object arrays. These are the objects **fields** and **tabs**.
+The **'assets/form_register.json'** file consits of two object arrays. These are the objects **fields** and **tabs**.
 
 ```json
 {
@@ -109,7 +112,7 @@ The **'assets/form_rgister.json'** file consits of two object arrays. These are 
 ``` 
 
 
-## The object **fields**
+## The objects of the **fields** array
 
 Object | Description | Type | Options
 --- | --- | --- | ---
@@ -147,7 +150,7 @@ MatchOtherValidator | field that should match another field, example: MatchOther
 StartwithValidator | field should begin with a string, example StartwithValidator\:42 | StartwithValidator:\<string>
 
 
-## The object of the **tabs** array
+## The objects of the **tabs** array
 
 | Object | Description | Type
 | -------| ------------ | ---
@@ -156,5 +159,4 @@ StartwithValidator | field should begin with a string, example StartwithValidato
 | subtitle  | subtitle of the tab/register | string
 | buttonnext | title of the button, performs the next step | string
 | order | sort order of registers | number |
-
 
